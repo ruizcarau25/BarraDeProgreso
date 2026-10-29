@@ -1,0 +1,20 @@
+<div
+  class="progress"
+  role="progressbar"
+  aria-label="Progreso"
+  aria-valuemin="0"
+  aria-valuemax="100"
+  [attr.aria-valuenow]="value()"
+  [style.height.px]="height()"
+>
+  <div
+    class="progress-bar"
+    [class]="barClasses()"
+    [style.width.%]="value()"
+    [style.background-color]="customColor()"
+  >
+    @if (showLabel()) {
+      {{ value() }}%
+    }
+  </div>
+</div>

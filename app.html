@@ -1,0 +1,29 @@
+<div class="container my-5">
+  <h1 class="mb-4">{{ title() }}</h1>
+  <p class="text-secondary">
+    Demo del componente <code>CustomProgressBarComponent</code> con inputs
+    <code>value</code> y <code>color</code> (más ampliaciones).
+  </p>
+
+  <h5 class="mt-4">1. Básica (value + color Bootstrap)</h5>
+  <app-custom-progress-bar [value]="40" color="success" />
+
+  <h5 class="mt-4">2. Color CSS personalizado</h5>
+  <app-custom-progress-bar [value]="65" color="#ff9800" />
+
+  <h5 class="mt-4">3. Con porcentaje y altura</h5>
+  <app-custom-progress-bar [value]="75" color="info" [showLabel]="true" [height]="28" />
+
+  <h5 class="mt-4">4. Striped</h5>
+  <app-custom-progress-bar [value]="50" color="danger" [striped]="true" [showLabel]="true" />
+
+  <h5 class="mt-4">5. Striped + animada</h5>
+  <app-custom-progress-bar [value]="85" color="warning" [animated]="true" [showLabel]="true" />
+
+  <h5 class="mt-4">6. Valor dinámico</h5>
+  <app-custom-progress-bar [value]="valor()" color="primary" [animated]="true" [showLabel]="true" [height]="30" />
+  <div class="mt-3 d-flex gap-2">
+    <button class="btn btn-outline-secondary" (click)="cambiar(-10)">-10</button>
+    <button class="btn btn-outline-primary" (click)="cambiar(10)">+10</button>
+  </div>
+</div>
